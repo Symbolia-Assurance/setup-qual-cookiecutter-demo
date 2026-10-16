@@ -1,0 +1,64 @@
+{
+  "app_objects": [
+    {
+      "factory": "create_app",
+      "module": "my_flask_app.app",
+      "name": "app"
+    },
+    {
+      "module": "my_flask_app.public.views",
+      "name": "blueprint"
+    },
+    {
+      "module": "my_flask_app.user.views",
+      "name": "blueprint"
+    }
+  ],
+  "app_roots": [
+    "my_flask_app"
+  ],
+  "elevation_writers": [],
+  "execution_authorized": false,
+  "guards": [
+    {
+      "decorator": "login_required",
+      "definition": "flask_login.login_required",
+      "key": "_user_id",
+      "requires": "session_key_present"
+    }
+  ],
+  "hardware_authorized": false,
+  "id": "flask-cf6a192b0be8",
+  "identity_writers": [
+    "my_flask_app.public.views.home"
+  ],
+  "idiom": "flask-session-decorator",
+  "industrial_release_authorized": false,
+  "language": "python",
+  "libraries": [
+    "click",
+    "environs",
+    "flask_bcrypt",
+    "flask_caching",
+    "flask_debugtoolbar",
+    "flask_login",
+    "flask_migrate",
+    "flask_sqlalchemy",
+    "flask_static_digest",
+    "flask_wtf",
+    "pytest",
+    "sqlalchemy",
+    "wtforms"
+  ],
+  "physical_validation": false,
+  "public_routes": [],
+  "registrations_complete": true,
+  "release_allowed": false,
+  "schema": "assure.python-auth.declaration/v1",
+  "self_approved": false,
+  "session_identity_key": "_user_id",
+  "signout_views": [
+    "my_flask_app.public.views.logout"
+  ],
+  "simulation": true
+}
